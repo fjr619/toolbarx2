@@ -11,6 +11,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 /**
@@ -22,7 +23,7 @@ public class CustomDialog extends Dialog {
     private Context mContext;
 
     public CustomDialog(@NonNull Context context) {
-        super(context, R.style.DialogTheme);
+        super(context, R.style.ThemeOverlay_AppCompat_Dialog_Alert);
         setView(context);
     }
 
@@ -53,6 +54,10 @@ public class CustomDialog extends Dialog {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             vStatusBar.setVisibility(View.VISIBLE);
             vStatusBar.getLayoutParams().height =getStatusBarHeight();
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         }
 
 
