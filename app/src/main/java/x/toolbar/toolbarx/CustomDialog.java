@@ -1,5 +1,6 @@
 package x.toolbar.toolbarx;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -7,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +25,7 @@ public class CustomDialog extends Dialog {
     private Context mContext;
 
     public CustomDialog(@NonNull Context context) {
-        super(context, R.style.ThemeOverlay_AppCompat_Dialog_Alert);
+        super(context, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         setView(context);
     }
 
@@ -51,13 +53,16 @@ public class CustomDialog extends Dialog {
 
 
         View vStatusBar = this.findViewById(R.id.v_statusbar);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             vStatusBar.setVisibility(View.VISIBLE);
             vStatusBar.getLayoutParams().height =getStatusBarHeight();
-        }
+
+//        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            getWindow().setStatusBarColor(ActivityCompat.getColor(context, R.color.colorPrimary));
+
         }
 
 
