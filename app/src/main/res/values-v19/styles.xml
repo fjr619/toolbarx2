@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="DialogTheme" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
-        <item name="android:fitsSystemWindows">true</item>
-    </style>
+    <!--<style name="DialogTheme" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">-->
+        <!--<item name="android:fitsSystemWindows">true</item>-->
+    <!--</style>-->
 </resources>

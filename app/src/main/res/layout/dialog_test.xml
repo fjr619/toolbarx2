@@ -23,8 +23,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
-            android:text="v1.0.0"
+            android:text="1.0.0"
             android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
@@ -42,7 +43,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0dp"
         android:background="@color/colorAccent" />
 
 
@@ -53,21 +54,30 @@
         android:padding="16dp">
 
         <TextView
+            android:gravity="center"
             android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="asdadasdas" />
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="sans-serif-medium"
+            android:text="Bantuan"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"/>
 
         <TextView
+            android:gravity="center"
             android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="asdadasdas" />
-
-        <TextView
-            android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="sans-serif-medium"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:text="Pengaturan"
+            android:clickable="true"/>
+        ontent"
             android:text="asdadasdas" />
     </LinearLayout>
 
