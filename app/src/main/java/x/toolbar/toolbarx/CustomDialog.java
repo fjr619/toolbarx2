@@ -25,7 +25,7 @@ public class CustomDialog extends Dialog {
     private Context mContext;
 
     public CustomDialog(@NonNull Context context) {
-        super(context, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+        super(context, android.R.style.Theme_Material_Dialog_NoActionBar);
         setView(context);
     }
 
@@ -54,16 +54,16 @@ public class CustomDialog extends Dialog {
 
         View vStatusBar = this.findViewById(R.id.v_statusbar);
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            vStatusBar.setVisibility(View.VISIBLE);
-            vStatusBar.getLayoutParams().height =getStatusBarHeight();
+//            vStatusBar.setVisibility(View.VISIBLE);
+//            vStatusBar.getLayoutParams().height =getStatusBarHeight();
 
 //        }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            getWindow().setStatusBarColor(ActivityCompat.getColor(context, R.color.colorPrimary));
-
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            getWindow().setStatusBarColor(ActivityCompat.getColor(context, R.color.colorPrimary));
+//
+//        }
 
 
         setCanceledOnTouchOutside(true);
